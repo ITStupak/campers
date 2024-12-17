@@ -1,0 +1,29 @@
+.header {
+  background: var(--inputs);
+  border-bottom: 1px solid var(--badges);
+}
+
+.header_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.header_nav_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.link {
+  color: var(--main);
+  transition: color var(--animation);
+}
+
+.active {
+  color: var(--button-hover);
+}

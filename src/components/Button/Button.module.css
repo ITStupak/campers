@@ -1,0 +1,14 @@
+.hero_btn {
+  display: block;
+  padding: 16px;
+  border-radius: 200px;
+  background-color: var(--button);
+  width: 173px;
+
+  transition: background-color var(--animation);
+}
+
+.hero_btn:hover {
+  background-color: var(--button-hover);
+  color: var(--white);
+}

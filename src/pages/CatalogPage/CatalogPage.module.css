@@ -1,0 +1,5 @@
+.wrapper {
+  display: flex;
+  gap: 64px;
+  margin: 48px 0;
+}

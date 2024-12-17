@@ -6,6 +6,16 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+button {
+  color: var(--inputs);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -16,16 +26,6 @@ body {
   padding: 0;
   overflow: hidden;
   clip-path: inset(50%);
-}
-
-button {
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -0.08px;
 }
 
 .loader {

@@ -1,7 +1,15 @@
-import css from './HomePage.module.css';
+import { Helmet } from 'react-helmet-async';
+import Hero from '../../components/Hero/Hero';
 
 const HomePage = () => {
-  return <div className={css.wrapper}>Home Page</div>;
+  return (
+    <>
+      <Helmet>
+        <title>Travel Trucks - Home</title>
+      </Helmet>
+      <Hero />
+    </>
+  );
 };
 
 export default HomePage;

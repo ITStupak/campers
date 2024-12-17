@@ -14,7 +14,7 @@ const Header = () => (
         <Logo />
         <ul className={css.header_nav_list}>
           <li>
-            <NavLink to="/" exact={true} className={classActive}>
+            <NavLink to="/" exact="true" className={classActive}>
               Home
             </NavLink>
           </li>

@@ -1,0 +1,166 @@
+.filters_wrap {
+  padding-top: 48px;
+  padding-left: 64px;
+}
+
+.location_box {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.location {
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.location_label {
+  position: relative;
+}
+
+.location_input {
+  display: flex;
+  width: 360px;
+  height: 56px;
+  padding: 18px 20px 18px 48px;
+  border-radius: 12px;
+  background: var(--inputs);
+}
+
+.location_input::placeholder {
+  color: var(--gray);
+}
+
+.location_input:focus {
+  outline: none;
+  color: var(--main);
+}
+
+.location_icon {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  z-index: 1;
+  fill: var(--gray);
+}
+
+.location_input:focus + .location_icon {
+  fill: var(--main);
+}
+
+.filters_title {
+  max-width: 360px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.equipments_box,
+.types_box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 360px;
+}
+
+.equipments_box {
+  margin-bottom: 32px;
+}
+
+.equipments,
+.types {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--gray-light);
+}
+
+.filters_list,
+.types_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 8px;
+}
+
+.filters_item,
+.types_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-light);
+  width: 112px;
+  height: 96px;
+}
+
+.filters_item {
+  border-radius: 12px;
+}
+
+.types_item {
+  border-radius: 10px;
+}
+
+.filters_item:hover,
+.types_item:hover {
+  border-color: var(--main);
+}
+
+.icon_dscr {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--main);
+}
+.checkbox_label {
+  position: relative;
+  min-width: 112px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* .checkbox:checked {
+  border-color: var(--button);
+} */
+
+.types_box {
+  margin-bottom: 40px;
+}
+
+.search_btn {
+  display: block;
+  padding: 16px;
+  border-radius: 200px;
+  background-color: var(--button);
+  width: 166px;
+
+  transition: background-color var(--animation);
+}
+
+.search_btn:hover {
+  background-color: var(--button-hover);
+  color: var(--white);
+}

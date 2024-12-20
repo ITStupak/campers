@@ -1,0 +1,6 @@
+.camper_list_section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  width: 888px;
+}

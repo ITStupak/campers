@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className={css.section_hero}>
-      <Container>
+    <section className={css.hero_section}>
+      <Container className={css.hero_container}>
         <div className={css.hero_wrapper}>
           <h1 className={css.hero_title}>Campers of your dreams</h1>
           <p className={css.hero_text}>

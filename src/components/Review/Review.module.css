@@ -1,0 +1,21 @@
+.camper_header_bottom {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin-top: 8px;
+}
+
+.camper_header_bottom_item {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.camper_rating:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.camper_location {
+  cursor: default;
+}

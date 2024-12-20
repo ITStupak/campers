@@ -1,4 +1,4 @@
-.section_hero {
+.hero_section {
   background-image: url('../../assets/images/hero_picture_1x.webp');
   background-size: cover;
   background-position: center;
@@ -6,9 +6,17 @@
 }
 
 @media (min-resolution: 192dpi) {
-  .section_hero {
+  .hero_section {
     background-image: url('../../assets/images/hero_picture_2x.webp');
   }
+}
+.hero_container {
+  min-width: 320px;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 64px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .hero_wrapper {

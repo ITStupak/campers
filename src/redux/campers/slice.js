@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchOneCamper, fetchAllCampers } from './operations.js';
 
 const INITIAL_STATE = {
-    campers: [],
+    items: [],
     total: 0,
     error: null,
     isLoading: false,
@@ -19,12 +19,12 @@ const campersSlice = createSlice({
     .addCase(fetchAllCampers.fulfilled, (state, {payload}) => {
         state.isLoading = false;
         state.error = null;
-        state.campers = payload;
-        state.total = payload;
+        state.items = payload.items;
+        state.total = payload.total;
     })
     .addCase(fetchAllCampers.rejected, (state, {payload}) => {
         state.isLoading = false;
-        state.campers = [];
+        state.items = [];
         state.error = payload;
     })
     
@@ -35,12 +35,12 @@ const campersSlice = createSlice({
     .addCase(fetchOneCamper.fulfilled, (state, {payload}) => {
         state.isLoading = false;
         state.error = null;
-        state.campers = payload;
-        state.total = payload;
+        state.items = payload.items;
+        state.total = payload.total;
     })
     .addCase(fetchOneCamper.rejected, (state, {payload}) => {
         state.isLoading = false;
-        state.campers = [];
+        state.items = [];
         state.error = payload;
     })
 });

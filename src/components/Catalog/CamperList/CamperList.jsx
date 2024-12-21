@@ -38,7 +38,7 @@ const CamperList = ({ campers }) => {
       {error !== null ? (
         <CampersNotFound />
       ) : (
-        <ul>
+        <ul className={css.camper_list}>
           {campers.map(camper => (
             <CamperCard
               key={camper.id}
@@ -49,7 +49,7 @@ const CamperList = ({ campers }) => {
       )}
       {error === null && (
         <Button
-          className={css.load_more}
+          className={css.load_more_btn}
           typeBtn="submit"
           ariaLabel="Download more campers"
           onClick={handleMore}

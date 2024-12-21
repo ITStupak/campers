@@ -7,7 +7,7 @@ import Button from '../../Button/Button';
 const CamperFilters = () => {
   return (
     <Formik>
-      <Form className={css.filters_wrap}>
+      <Form>
         <Container className={css.location_box}>
           <p className={css.location}>Location</p>
           <label className={css.location_label}>

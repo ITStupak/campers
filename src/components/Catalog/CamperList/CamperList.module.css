@@ -1,6 +1,41 @@
 .camper_list_section {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 888px;
+}
+
+.camper_list {
+  display: flex;
   flex-direction: column;
   row-gap: 32px;
-  width: 888px;
+  margin-bottom: 40px;
+}
+
+.load_more_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--gray-light);
+  background-color: transparent;
+  border-radius: 200px;
+  padding: 16px;
+  width: 145px;
+  height: 56px;
+  cursor: pointer;
+  margin: 0 auto;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--main);
+
+  transition: all var(--animation);
+}
+
+.load_more_btn:hover {
+  border-color: var(--button-hover);
 }

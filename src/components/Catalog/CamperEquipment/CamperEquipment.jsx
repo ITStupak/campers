@@ -9,7 +9,7 @@ const CamperEquipment = ({ camper }) => {
           className={css.camper_equipment_item}
           aria-label={`Transmission: ${camper.transmission}`}
         >
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use
               xlinkHref={`${sprite}#transmission`}
               href={`${sprite}#transmission`}
@@ -23,7 +23,7 @@ const CamperEquipment = ({ camper }) => {
           className={css.camper_equipment_item}
           aria-label={`Engine ${camper.engine}`}
         >
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#engine`} href={`${sprite}#engine`} />
           </svg>
           {camper.engine}
@@ -34,7 +34,7 @@ const CamperEquipment = ({ camper }) => {
           className={css.camper_equipment_item}
           aria-label="Air conditioning available"
         >
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#ac`} href={`${sprite}#ac`} />
           </svg>
           AC
@@ -45,7 +45,7 @@ const CamperEquipment = ({ camper }) => {
           className={css.camper_equipment_item}
           aria-label="Kitchen available"
         >
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#kitchen`} href={`${sprite}#kitchen`} />
           </svg>
           Kitchen
@@ -53,7 +53,7 @@ const CamperEquipment = ({ camper }) => {
       )}
       {camper.TV && (
         <li className={css.camper_equipment_item} aria-label="TV available">
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#tv`} href={`${sprite}#tv`} />
           </svg>
           TV
@@ -64,7 +64,7 @@ const CamperEquipment = ({ camper }) => {
           className={css.camper_equipment_item}
           aria-label="Bathroom available"
         >
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#bathroom`} href={`${sprite}#bathroom`} />
           </svg>
           Bathroom
@@ -73,7 +73,7 @@ const CamperEquipment = ({ camper }) => {
 
       {camper.radio && (
         <li className={css.camper_equipment_item} aria-label="Radio available">
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#radio`} href={`${sprite}#radio`} />
           </svg>
           Radio
@@ -84,7 +84,7 @@ const CamperEquipment = ({ camper }) => {
           className={css.camper_equipment_item}
           aria-label="2 adults available"
         >
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#adults`} href={`${sprite}#adults`} />
           </svg>
           2 adults
@@ -95,7 +95,7 @@ const CamperEquipment = ({ camper }) => {
           className={css.camper_equipment_item}
           aria-label="Refrigerator available"
         >
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use
               xlinkHref={`${sprite}#refrigerator`}
               href={`${sprite}#refrigerator`}
@@ -109,7 +109,7 @@ const CamperEquipment = ({ camper }) => {
           className={css.camper_equipment_item}
           aria-label="Microwave available"
         >
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use
               xlinkHref={`${sprite}#microwave`}
               href={`${sprite}#microwave`}
@@ -120,7 +120,7 @@ const CamperEquipment = ({ camper }) => {
       )}
       {camper.gas && (
         <li className={css.camper_equipment_item} aria-label="Gas available">
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#gas`} href={`${sprite}#gas`} />
           </svg>
           Gas
@@ -128,7 +128,7 @@ const CamperEquipment = ({ camper }) => {
       )}
       {camper.water && (
         <li className={css.camper_equipment_item} aria-label="Water available">
-          <svg width={20} height={20}>
+          <svg width={20} height={20} className={css.camper_equipment_icon}>
             <use xlinkHref={`${sprite}#water`} href={`${sprite}#water`} />
           </svg>
           Water

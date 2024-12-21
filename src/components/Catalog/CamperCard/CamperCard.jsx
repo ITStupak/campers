@@ -1,7 +1,7 @@
 import sprite from '../../../assets/icons/sprite.svg';
 import css from './CamperCard.module.css';
 import Review from '../../Review/Review.jsx';
-import CamperEquipment from '../../Review/Review.jsx';
+import CamperEquipment from '../../Catalog/CamperEquipment/CamperEquipment.jsx';
 import Button from '../../Button/Button.jsx';
 
 import { useDispatch } from 'react-redux';
@@ -52,8 +52,8 @@ const CamperCard = ({ camper }) => {
             location={camper.location}
           />
         </header>
-        <p className={css.card_dscr}>{camper.description}</p>
-        <CamperEquipment camper={camper} />
+        <p className={css.card_dscr}>{camper.description.slice(0, 60)}...</p>
+        <CamperEquipment camper={camper} scrollbar={true} />
         <Button
           className={css.card_more_btn}
           typeBtn="button"

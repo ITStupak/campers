@@ -1,17 +1,14 @@
 .card_wrap {
   display: flex;
   padding: 24px;
-  align-items: flex-start;
   gap: 24px;
   border-radius: 20px;
   border: 1px solid var(--gray-light);
-  background: var(--white);
   max-width: 888px;
 }
 
 .card_img {
   border-radius: 10px;
-  display: block;
   width: 292px;
   height: 320px;
   object-fit: cover;
@@ -20,14 +17,16 @@
 
 .card_info {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   row-gap: 24px;
 }
 
 .card_info_main {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  row-gap: 8px;
   color: var(--main);
   font-family: 'Inter', sans-serif;
   font-size: 24px;
@@ -36,13 +35,19 @@
   line-height: 1.3;
 }
 
-.card_info_title {
+.card_info_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_info_title,
+.card_price {
   color: var(--main);
-  font-family: 'Inter', sans-serif;
   font-size: 24px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.33;
 }
 
 .card_price_wrap {
@@ -53,12 +58,17 @@
 
 .card_dscr {
   overflow: hidden;
-  color: var(--text);
+  color: var(--Text);
   text-overflow: ellipsis;
-
-  width: 525px;
-  /* font-family: 'Inter', sans-serif; */
   line-height: 1.5;
+}
+
+.favorite_icon {
+  cursor: pointer;
+}
+
+.favorite_icon:hover {
+  fill: #ffc531;
 }
 
 .card_more_btn {
@@ -68,10 +78,10 @@
   background-color: var(--button);
   width: 166px;
 
-  transition: background-color var(--animation);
+  transition: border-color var(--animation);
 }
 
 .card_more_btn:hover {
-  background-color: var(--button-hover);
+  border-color: var(--button-hover);
   color: var(--white);
 }

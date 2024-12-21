@@ -1,4 +1,12 @@
-.header {
+/* .header {
+    background: var(--inputs);
+    border-bottom: 1px solid var(--badges);
+  } */
+.header_container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
   background: var(--inputs);
   border-bottom: 1px solid var(--badges);
 }

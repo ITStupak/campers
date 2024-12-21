@@ -28,7 +28,7 @@ const Catalog = () => {
       dispatch(clearFilter());
       dispatch(fetchAllCampers());
     }
-  }, [dispatch, campers, error, filters]);
+  }, [dispatch, campers, error]);
 
   return loading ? <Loader /> : <CamperList campers={campers} />;
 };

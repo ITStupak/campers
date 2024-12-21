@@ -11,8 +11,8 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { campersReducer } from "./campers/slice.js";
-import { favoritesReducer } from './favorites/slice.js';
 import { filtersReducer } from './filters/slice.js';
+import { favoritesReducer } from './favorites/slice.js';
 
 
 const favoritesPersistConfig = {
@@ -25,12 +25,6 @@ const persistedFavoritesReducer = persistReducer(
   favoritesPersistConfig,
   favoritesReducer
 );
-
-/* const persistConfig = {
-  key: "campers",
-  storage,
-  whitelist: ["campers"],
-}; */
 
 export const store = configureStore({
   reducer: {

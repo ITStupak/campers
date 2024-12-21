@@ -9,7 +9,7 @@ const classActive = ({ isActive }) => {
 
 const Header = () => (
   <header className={css.header}>
-    <Container>
+    <Container className={css.header_container}>
       <nav className={css.header_nav}>
         <Logo />
         <ul className={css.header_nav_list}>

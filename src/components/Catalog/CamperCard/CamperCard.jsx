@@ -6,6 +6,7 @@ import Button from '../../Button/Button.jsx';
 
 import { useDispatch } from 'react-redux';
 import { toggleFavorite } from '../../../redux/favorites/slice.js';
+import { Link } from 'react-router-dom';
 
 const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();
@@ -54,13 +55,15 @@ const CamperCard = ({ camper }) => {
         </header>
         <p className={css.card_dscr}>{camper.description.slice(0, 60)}...</p>
         <CamperEquipment camper={camper} scrollbar={true} />
-        <Button
-          className={css.card_more_btn}
-          typeBtn="button"
-          ariaLabel="Open Camper details page"
-        >
-          Show More
-        </Button>
+        <Link to={`/catalog/:${camper.id}`}>
+          <Button
+            className={css.card_more_btn}
+            typeBtn="button"
+            ariaLabel="Open Camper details page"
+          >
+            Show More
+          </Button>
+        </Link>
       </div>
     </li>
   );

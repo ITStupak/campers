@@ -23,14 +23,14 @@ const CamperForm = () => {
               type="text"
               name="name"
               placeholder="Name*"
-              autocomplete="off"
+              autoComplete="off"
             ></Field>
             <Field
               className={css.form_input}
               type="email"
               name="email"
               placeholder="Email*"
-              autocomplete="off"
+              autoComplete="off"
             ></Field>
             <DatePicker
               className={css.form_input}

@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import css from './CamperDetailsPage.module.css';
-import CamperForm from '../../components/CamperDetails/CamperForm/CamperForm';
+import CamperDetails from '../../components/CamperDetails/CamperDetails';
 
 const CamperDetailsPage = () => {
   return (
@@ -9,7 +9,7 @@ const CamperDetailsPage = () => {
         <title>Travel Trucks - Camper Details</title>
       </Helmet>
       <section className={css.section_details}>
-        <CamperForm />
+        <CamperDetails />
       </section>
     </>
   );

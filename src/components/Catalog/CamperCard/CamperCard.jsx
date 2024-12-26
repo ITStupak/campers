@@ -55,7 +55,7 @@ const CamperCard = ({ camper }) => {
         </header>
         <p className={css.card_dscr}>{camper.description.slice(0, 60)}...</p>
         <CamperEquipment camper={camper} scrollbar={true} />
-        <Link to={`/catalog/:${camper.id}`}>
+        <Link to={`/catalog/${camper.id}`}>
           <Button
             className={css.card_more_btn}
             typeBtn="button"

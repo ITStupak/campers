@@ -1,0 +1,4 @@
+.section_details {
+  display: flex;
+  column-gap: 40px;
+}

@@ -47,6 +47,7 @@
 }
 .star_empty {
   fill: var(--badges);
+  stroke: var(--rating);
 }
 .review_comment {
   font-family: var(--font-family);

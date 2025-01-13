@@ -1,0 +1,10 @@
+.features_wrapper {
+  padding: 44px 52px;
+  max-width: 631px;
+  min-width: 631px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: var(--inputs);
+}

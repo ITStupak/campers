@@ -1,4 +1,33 @@
 .section_details {
+  padding: 48px 64px 80px;
+}
+.details_wrapper_top {
   display: flex;
+  flex-direction: column;
+}
+.details_info_wrap {
+  width: 1312px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
+.details_title,
+.details_price {
+  color: var(--main);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.details_title {
+  margin-bottom: 8px;
+}
+.details_review_wrap {
+  margin-bottom: 16px;
+}
+.details_wrapper_bottom {
+  display: flex;
+  justify-content: center;
   column-gap: 40px;
+  flex-direction: row;
 }

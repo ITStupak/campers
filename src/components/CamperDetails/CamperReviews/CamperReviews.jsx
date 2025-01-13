@@ -5,6 +5,8 @@ import sprite from '../../../assets/icons/sprite.svg';
 const maxStars = 5;
 
 const CamperReviews = ({ camper }) => {
+  console.log(camper);
+
   return (
     <Container className={css.reviews_wrapper}>
       {
@@ -21,8 +23,8 @@ const CamperReviews = ({ camper }) => {
                         <svg
                           className={
                             index < item.reviewer_rating
-                              ? 'star_filled'
-                              : 'star_empty'
+                              ? css.star_filled
+                              : css.star_empty
                           }
                           width={16}
                           height={16}

@@ -1,0 +1,11 @@
+.vehicle_details_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vehicle_details_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

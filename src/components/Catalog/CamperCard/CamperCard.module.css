@@ -78,10 +78,10 @@
   background-color: var(--button);
   width: 166px;
 
-  transition: border-color var(--animation);
+  transition: background-color var(--animation);
 }
 
 .card_more_btn:hover {
-  border-color: var(--button-hover);
+  background-color: var(--button-hover);
   color: var(--white);
 }

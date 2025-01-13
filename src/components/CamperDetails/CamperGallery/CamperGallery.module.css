@@ -1,0 +1,25 @@
+.camper_gallery_wrapper {
+  width: 1312px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.gallery_list {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 28px;
+}
+.gallery_item {
+  /* background: url('path_to_image'); */
+}
+.gallery_img {
+  border-radius: 10px;
+  width: 276px;
+  height: 312px;
+  object-fit: cover;
+  object-position: center;
+}
+.gallery_dscr {
+  line-height: 1.5;
+  color: var(--text);
+}

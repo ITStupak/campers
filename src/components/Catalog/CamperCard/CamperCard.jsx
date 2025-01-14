@@ -27,7 +27,11 @@ const CamperCard = ({ camper }) => {
       <div className={css.card_info}>
         <header className={css.card_info_main}>
           <div className={css.card_info_top}>
-            <h2 className={css.card_info_title}>{camper.name}</h2>
+            <h2 className={css.card_info_title}>
+              {camper.name.length > 23
+                ? camper.name.slice(0, 23) + '...'
+                : camper.name}
+            </h2>
             <div className={css.card_price_wrap}>
               <span className={css.card_price}>{`€${camper.price.toFixed(
                 2

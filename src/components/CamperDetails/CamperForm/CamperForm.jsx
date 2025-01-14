@@ -24,14 +24,14 @@ const CamperForm = () => {
               name="name"
               placeholder="Name*"
               autoComplete="off"
-            ></Field>
+            />
             <Field
               className={css.form_input}
               type="email"
               name="email"
               placeholder="Email*"
               autoComplete="off"
-            ></Field>
+            />
             <DatePicker
               className={css.form_input}
               //   selected={values.date}
@@ -39,20 +39,12 @@ const CamperForm = () => {
               placeholderText="Booking date*"
               dateFormat="yyyy-MM-dd"
             />
-            {/* 
-            <Field
-              className={css.form_input}
-              type="date"
-              name="date"
-              placeholder="Booking date*"
-              autocomplete="off"
-            ></Field> */}
             <Field
               className={css.form_input_text_aria}
               as="textarea"
               name="comment"
               placeholder="Comment"
-            ></Field>
+            />
           </div>
           <Button
             typeBtn="submit"

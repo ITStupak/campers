@@ -5,26 +5,34 @@ const VehicleDetails = ({ camper }) => {
     <ul className={css.vehicle_details_list}>
       <li className={css.vehicle_details_item}>
         <p>Form</p>
-        {camper.form === 'panelTruck' ? 'Panel truck' : camper.form}
+        {(() => {
+          switch (camper.form) {
+            case 'panelTruck':
+              return 'Panel truck';
+            case 'alcove':
+              return 'Alcove';
+            case 'fullyIntegrated':
+              return 'Fully Integrated';
+            default:
+              return 'Undefined';
+          }
+        })()}
       </li>
       <li className={css.vehicle_details_item}>
         <p>Length</p>
-        {`${camper.length.slice(0, -1)}` +
-          ' ' +
-          `${camper.length.slice(-1)}`}{' '}
-        {/* явно надо проще:))) */}
+        {camper.length.replace('m', ' m')}
       </li>
       <li className={css.vehicle_details_item}>
         <p>Width</p>
-        {camper.width}
+        {camper.width.replace('m', ' m')}
       </li>
       <li className={css.vehicle_details_item}>
         <p>Height</p>
-        {camper.height}
+        {camper.height.replace('m', ' m')}
       </li>
       <li className={css.vehicle_details_item}>
         <p>Tank</p>
-        {camper.tank}
+        {camper.tank.replace('l', ' l')}
       </li>
       <li className={css.vehicle_details_item}>
         <p>Consumption</p>

@@ -1,7 +1,14 @@
+.camper_equipment_wrap {
+  width: 502px;
+  overflow: hidden;
+}
 .camper_equipment {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  width: 524px;
+  height: 104px;
+  overflow-y: auto;
 }
 
 .camper_equipment_item {

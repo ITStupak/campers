@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchOneCamper } from '../../redux/campers/operations';
 import { selectCamperById } from '../../redux/campers/selectors';
 import CamperForm from '../CamperDetails/CamperForm/CamperForm';
@@ -10,22 +10,29 @@ import CamperDetailsBar from './CamperDetailsBar/CamperDetailsBar';
 import CamperGallery from './CamperGallery/CamperGallery';
 import Review from '../Review/Review';
 import Container from '../Container/Container';
-// import CamperReviews from '../CamperDetails/CamperReviews/CamperReviews';
+import CamperReviews from '../CamperDetails/CamperReviews/CamperReviews';
 
 const CamperDetails = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const camper = useSelector(state => selectCamperById(state, id));
-  //   const [isActiveTab, setIsActiveTab] = useState({
-  //     feature: true,
-  //     reviews: false,
-  //   });
+  const [isActiveBar, setIsActiveBar] = useState({
+    feature: true,
+    reviews: false,
+  });
 
   useEffect(() => {
     if (id) {
       dispatch(fetchOneCamper(id));
     }
   }, [dispatch, id]);
+
+  const handleClickBar = tabName => {
+    setIsActiveBar({
+      feature: tabName === 'feature',
+      reviews: tabName === 'reviews',
+    });
+  };
 
   if (!camper) {
     return <p>Camper not found</p>;
@@ -49,11 +56,14 @@ const CamperDetails = () => {
             </span>
           </div>
           <CamperGallery camper={camper} />
-          <CamperDetailsBar />
+          <CamperDetailsBar active={isActiveBar} handleClick={handleClickBar} />
         </div>
         <div className={css.details_wrapper_bottom}>
-          <CamperFeatures camper={camper} />
-          {/* <CamperReviews camper={camper} /> */}
+          {isActiveBar.feature ? (
+            <CamperFeatures camper={camper} />
+          ) : (
+            <CamperReviews camper={camper} />
+          )}
           <CamperForm />
         </div>
       </section>

@@ -1,34 +1,30 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import css from './CamperDetailsBar.module.css';
-import classNames from 'classnames';
 
-const CamperDetailsBar = () => {
+const CamperDetailsBar = ({ active, handleClick }) => {
+  const { feature, reviews } = active;
   return (
     <ul className={css.details_bar_wrapper}>
       <li>
-        <NavLink
-          to="/catalog"
-          exact="true"
-          className={classNames(css.details_bar_title, css.bar_title_accent)}
+        <Link
+          to="features"
+          className={`${css.details_bar_title} ${css[feature ? 'active' : '']}`}
+          onClick={() => handleClick('feature')}
         >
           Features
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink to="/catalog" className={classNames(css.details_bar_title)}>
+        <Link
+          to="reviews"
+          className={`${css.details_bar_title} ${css[reviews ? 'active' : '']}`}
+          onClick={() => handleClick('reviews')}
+        >
           Reviews
-        </NavLink>
+        </Link>
       </li>
     </ul>
   );
 };
-{
-  /* <div className={css.details_bar_wrapper}>
-      <h4 className={classNames(css.details_bar_title, css.bar_title_accent)}>
-        Features
-      </h4>
-      <h4 className={classNames(css.details_bar_title)}>Reviews</h4>
-    </div> */
-}
 
 export default CamperDetailsBar;

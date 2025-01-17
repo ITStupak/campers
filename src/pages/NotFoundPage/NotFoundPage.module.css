@@ -1,6 +1,28 @@
-.page {
+.not_found_page {
+  width: 100vw;
+  height: 100vh;
   padding-top: 100px;
   text-align: center;
+  background-color: #b7daf0;
+}
+.not_found_title {
   font-size: 50px;
   font-weight: 700;
+  color: red;
+  margin-bottom: 40px;
+}
+.not_found_text {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.not_found_link {
+  color: blue;
+  font-size: 40px;
+  font-weight: 700;
+  transition: color var(--animation);
+}
+.not_found_link:hover {
+  /* scale: 1.2; */
+  color: red;
 }

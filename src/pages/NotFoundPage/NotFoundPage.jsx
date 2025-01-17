@@ -16,7 +16,7 @@ const NotFoundPage = () => {
         </p>
         <p className={css.not_found_text}>Let’s get you back on track!</p>
         <Link to="/" className={css.not_found_link}>
-          Go Home
+          ⬅️ Go Home
         </Link>
       </section>
     </Container>

@@ -18,6 +18,13 @@
   height: 312px;
   object-fit: cover;
   object-position: center;
+  transition: all var(--animation);
+}
+.gallery_img:hover {
+  cursor: zoom-in;
+  scale: 1.04;
+  border: 1px solid var(--main);
+  box-shadow: 6px -6px 30px -6px rgba(16, 24, 40, 1);
 }
 .gallery_dscr {
   line-height: 1.5;

@@ -1,8 +1,8 @@
 .card_wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 24px;
-  gap: 8px;
+  gap: 24px;
   border-radius: 20px;
   border: 1px solid var(--gray-light);
   max-width: 888px;

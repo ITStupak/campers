@@ -2,7 +2,6 @@ import sprite from '../../../assets/icons/sprite.svg';
 import css from './CamperCard.module.css';
 import Review from '../../Review/Review.jsx';
 import CamperEquipment from '../../Catalog/CamperEquipment/CamperEquipment.jsx';
-import Button from '../../Button/Button.jsx';
 
 import { useDispatch } from 'react-redux';
 import { toggleFavorite } from '../../../redux/favorites/slice.js';
@@ -17,13 +16,15 @@ const CamperCard = ({ camper }) => {
 
   return (
     <li className={css.card_wrap}>
-      <img
-        src={camper.gallery[0].thumb}
-        alt={`Image of ${camper.name}`}
-        width={292}
-        height={320}
-        className={css.card_img}
-      />
+      <Link to={`/catalog/${camper.id}`}>
+        <img
+          src={camper.gallery[0].thumb}
+          alt={`Image of ${camper.name}`}
+          width={292}
+          height={320}
+          className={css.card_img}
+        />
+      </Link>
       <div className={css.card_info}>
         <header className={css.card_info_main}>
           <div className={css.card_info_top}>
@@ -52,21 +53,20 @@ const CamperCard = ({ camper }) => {
             </div>
           </div>
           <Review
-            reviews={camper.reviews}
+            id={camper.id}
             rating={camper.rating}
+            reviews={camper.reviews}
             location={camper.location}
           />
         </header>
         <p className={css.card_dscr}>{camper.description.slice(0, 60)}...</p>
         <CamperEquipment camper={camper} scrollbar={true} />
-        <Link to={`/catalog/${camper.id}`}>
-          <Button
-            className={css.card_more_btn}
-            typeBtn="button"
-            ariaLabel="Open Camper details page"
-          >
-            Show More
-          </Button>
+        <Link
+          to={`/catalog/${camper.id}`}
+          className={css.show_more_link}
+          rel="noopener noreferrer"
+        >
+          Show More
         </Link>
       </div>
     </li>

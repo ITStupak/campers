@@ -5,7 +5,7 @@ import css from './Logo.module.css';
 const Logo = () => {
   return (
     <>
-      <NavLink to="/" className={css.logo}>
+      <NavLink to="/" rel="noopener noreferrer">
         <svg className={css.icon}>
           <use xlinkHref={`${sprite}#logo`} href={`${sprite}#logo`} />
         </svg>

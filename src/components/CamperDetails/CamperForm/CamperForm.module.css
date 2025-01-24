@@ -64,6 +64,11 @@
   left: 18px;
 }
 
+.form_input:hover,
+.form_input_text_aria:hover {
+  outline: 1px dotted var(--rating);
+}
+
 .send_btn {
   display: block;
   margin: 0 auto;

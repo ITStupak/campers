@@ -46,8 +46,9 @@ const CamperDetails = () => {
             <h2 className={css.details_title}>{camper.name}</h2>
             <Container className={css.details_review_wrap}>
               <Review
-                reviews={camper.reviews}
+                id={camper.id}
                 rating={camper.rating}
+                reviews={camper.reviews}
                 location={camper.location}
               />
             </Container>

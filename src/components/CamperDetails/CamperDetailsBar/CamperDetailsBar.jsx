@@ -10,6 +10,7 @@ const CamperDetailsBar = ({ active, handleClick }) => {
           to="features"
           className={`${css.details_bar_title} ${css[feature ? 'active' : '']}`}
           onClick={() => handleClick('feature')}
+          rel="noopener noreferrer"
         >
           Features
         </Link>
@@ -19,6 +20,7 @@ const CamperDetailsBar = ({ active, handleClick }) => {
           to="reviews"
           className={`${css.details_bar_title} ${css[reviews ? 'active' : '']}`}
           onClick={() => handleClick('reviews')}
+          rel="noopener noreferrer"
         >
           Reviews
         </Link>

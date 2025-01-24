@@ -14,12 +14,21 @@ const Header = () => (
         <Logo />
         <ul className={css.header_nav_list}>
           <li>
-            <NavLink to="/" exact="true" className={classActive}>
+            <NavLink
+              to="/"
+              exact="true"
+              className={classActive}
+              rel="noopener noreferrer"
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/catalog" className={classActive}>
+            <NavLink
+              to="/catalog"
+              className={classActive}
+              rel="noopener noreferrer"
+            >
               Catalog
             </NavLink>
           </li>

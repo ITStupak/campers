@@ -1,6 +1,6 @@
-.wrapper {
+.catalog_page_wrap {
   display: flex;
   justify-content: center;
   gap: 64px;
-  margin: 0 auto;
+  padding: 48px 64px 52px;
 }

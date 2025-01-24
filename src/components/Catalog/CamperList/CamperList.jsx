@@ -15,8 +15,6 @@ let limit = 4;
 let limitSequence = 4;
 
 const CamperList = ({ campers }) => {
-  // console.log(campers);
-
   const dispatch = useDispatch();
 
   const totalCampers = useSelector(selectTotalCampers);

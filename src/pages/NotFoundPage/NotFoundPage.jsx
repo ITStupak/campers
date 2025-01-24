@@ -15,7 +15,7 @@ const NotFoundPage = () => {
           Looks like this page is not available.
         </p>
         <p className={css.not_found_text}>Let’s get you back on track!</p>
-        <Link to="/" className={css.not_found_link}>
+        <Link to="/" className={css.not_found_link} rel="noopener noreferrer">
           ⬅️ Go Home
         </Link>
       </section>

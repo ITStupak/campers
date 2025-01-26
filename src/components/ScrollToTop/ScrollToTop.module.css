@@ -1,0 +1,35 @@
+.scroll_btn {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  padding: 3px;
+  color: var(--white);
+  background-color: var(--button-hover);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* opacity: 0.5; */
+
+  transition: opacity var(--animation);
+}
+
+.scroll_btn:hover {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity var(--animation);
+}
+
+.visible {
+  opacity: 0.5;
+  visibility: visible;
+
+  transition: opacity var(--animation);
+}
